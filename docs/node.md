@@ -52,7 +52,7 @@ static fibos.stop();
 
 ### Plugins
 
-#### http Plugin
+#### http
 
 | key 					   	  	   | type    | describe 		  	 | default value     |
 | -------------------------------- | ------- | --------------------- | ----------------- |
@@ -77,7 +77,7 @@ static fibos.stop();
 	});
 	```
 
-#### chain Plugin
+#### chain
 
 | key 					 	   | type    | describe 								     | default value   |
 | ---------------------------- | ------- | --------------------------------------------- | --------------- |
@@ -111,7 +111,7 @@ static fibos.stop();
 	});
 	```
 
-#### chain_api Plugin
+#### chain_api
 
 ``` bash tab="get_info"
 // 获取与节点相关的最新信息
@@ -140,7 +140,7 @@ curl --request POST \
   -d '{"account_name": "fuckfuckfuck"}'
 ```
 
-#### net Plugin
+#### net
 
 | key 					    | type    | describe 				  	| default value       		  |
 | ------------------------- | ------- | --------------------------- | --------------------------- |
@@ -185,7 +185,7 @@ curl --request POST \
 	+ specified: 则必须至少指定一次对等密钥。
 	+ producers: 则不需要对等密钥。
 
-#### producer Plugin
+#### producer
 
 | key 					   	 | type    | describe 		    	  | default value |
 | -------------------------- | ------- | ------------------------ | ------------- |
@@ -206,11 +206,11 @@ curl --request POST \
 	JSON.stringify(["active_publickey", "active_privateKey"]);
 	```
 
-#### history Plugin
+#### history
 
-#### history_api Plugin
+#### history_api
 
-#### mongo_db Plugin
+#### mongo_db
 
 | key 	     	   | type    | describe    | default value |
 | ---------------- | ------- | ----------- | ------------- |
@@ -228,7 +228,7 @@ curl --request POST \
 	});
 	```
 
-#### bnet Plugin
+#### bnet
 
 | key 					   | type    | describe 		    	  								   | default value |
 | ------------------------ | ------- | ----------------------------------------------------------- | ------------- |
