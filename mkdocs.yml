@@ -3,15 +3,15 @@
 site_name: FIBOS.docs
 site_description: Docs For FIBOS
 site_author: FIBOS Fan
-# site_url: https://squidfunk.github.io/mkdocs-material/
+site_url: http://fibos.ziqiang.ch/
 
-# # Repository
-# repo_name: squidfunk/mkdocs-material
-# repo_url: https://github.com/squidfunk/mkdocs-material
-# edit_uri: ""
+# Repository
+repo_name: lanlyhs/FIBOS-docs
+repo_url: https://github.com/lanlyhs/FIBOS-docs
+edit_uri: ""
 
-# # Copyright
-# copyright: 'Copyright &copy; 2016 - 2018 Martin Donath'
+# Copyright
+copyright: 'Copyright &copy; 2018 -  Lanlyhs'
 
 # Configuration
 theme:
