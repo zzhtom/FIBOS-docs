@@ -265,6 +265,25 @@ curl --request POST \
 | bnet-connect	 		   | -  	 | 其他节点的远程端点连接，根据需要使用多个 bnet-connect 选项来组成网络 | - 			   |
 | bnet-no-trx			   | Boolean | 这个 peer 请求其他节点没有 pending 的 transactions 			   | false 		   |
 
+#### emitter
+
+```javascript
+fibos.load('emitter');
+fibos.on('action', at => {
+    let acitonname = at.act.name;
+    if(acitonname === 'extransfer') {
+        let trx_id = at.trx_id
+        let data = at.act.data;
+        let from = data.from;
+        let to = data.to;
+        let memo = data.memo;
+        let quantity = data.quantity.quantity;
+        let contract = data.quantity.contract;
+	    mysql.execute('insert into transfer_info(from,to,memo,trx_id,quantity,contract) values(?,?,?,?,?,?)', [from , to, memo , trx_id , quantity , contract]);        
+    }
+});
+```
+
 ### Attributes
 
 | key 			   | type    | describe   | default value |
