@@ -83,8 +83,8 @@ markdown_extensions:
 nav:
   - FIBOS: index.md
   - Node Config: node.md
-  - API: api.md
   - ABI: abi.md
+  - API: api.md
   - Code Block: codeBlock.md
   - DAPP: dapp.md
 

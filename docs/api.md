@@ -1,5 +1,15 @@
 # API
 
+## chainId
+
+### FIBOS
+
+**6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a**
+
+### EOS
+
+**aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906**
+
 ## fibos.js
 
 ### FIBOS Client
@@ -27,7 +37,7 @@ const FIBOS = require("fibos.js");
 let pubkey = FIBOS.modules.ecc.privateToPublic(prikey);
 ```
 
-## JS Contract
+## FIBOS Client
 
 ### newaccountSync
 
@@ -113,6 +123,46 @@ ctx.voteproducerSync(producer_name, ", ["producer_name"]);
 
 ```javascript
 fibosClient.claimrewardsSync("producer");
+```
+
+### transferSync
+
+#### EOS => FIBOS
+
+```javascript
+let ctx = eosClient.contractSync("eosio.token");
+ctx.transferSync(eosaccount, "fiboscouncil", "1.0000 EOS", fibosaccount, {
+    authorization: eosaccount
+});
+```
+
+#### FIBOS => EOS
+
+```javascript
+let ctx = fibosClient.contractSync("eosio.token");
+ctx.transferSync(fibosaccount, "fiboscouncil", "1.0000 EOS", eosaccount, {
+    authorization: fibosaccount
+});
+```
+
+### exchangeSync
+
+#### EOS => FO
+
+```javascript
+let ctx = fibosClient.contractSync("eosio.token");
+ctx.exchangeSync(accountName, "10.0000 EOS@eosio", "0.0000 FO@eosio", "exchange EOS to FO", {
+    authorization: accountName
+});
+```
+
+#### FO => EOS
+
+```javascript
+let ctx = fibos_client.contractSync('eosio.token');
+ctx.exchangeSync(accountName, '10.0000 FO@eosio', `0.0000 EOS@eosio`, 'exchange FO to EOS', {
+    authorization: accountName
+});
 ```
 
 ## Query
